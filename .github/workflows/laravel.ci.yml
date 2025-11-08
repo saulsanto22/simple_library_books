@@ -23,3 +23,6 @@ jobs:
 
       - name: Run Laravel tests
         run: php artisan test
+
+      - name: Run Laravel tests
+        run: php artisan test
