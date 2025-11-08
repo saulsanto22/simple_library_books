@@ -21,13 +21,12 @@ jobs:
       - name: Install Composer dependencies
         run: composer install --no-progress --no-suggest --prefer-dist
 
-
+      - name: Generate key
+        run: php artisan key:generate
+        
       - name: Create .env file
         run: |
           cp .env.example .env
-          
-      - name: Run Laravel tests
-        run: php artisan test
 
       - name: Run Laravel tests
         run: php artisan test
